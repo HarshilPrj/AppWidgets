@@ -1,0 +1,72 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.AppWidgets.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_200"
+    android:theme="@style/Theme.AppWidgets.AppWidgetContainer">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/section_id"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentTop="true"
+       android:orientation="horizontal"
+       style="@style/AppWidgetSection">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="2"
+           android:id="@+id/appwidget_id_lable"
+           android:text="ID"
+           style="@style/AppWidgetLabel"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:id="@+id/appwidget_id"
+           android:text="xxx"
+           style="@style/AppWidgetText"/>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/section_id"
+        android:orientation="vertical"
+        style="@style/AppWidgetSection"
+        android:id="@+id/section_update">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appwidget_update_lable"
+            android:text="Last updated"
+            android:layout_marginBottom="2dp"
+            style="@style/AppWidgetLabel"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/appwidget_update"
+            android:text="@string/date_count_formate"
+            style="@style/AppWidgetText"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_update"
+        android:layout_below="@+id/section_update"
+        android:layout_centerHorizontal="true"
+        android:text="Update Now"
+        android:background="@color/light_blue_900"
+        style="@style/AppWidgetButton"/>
+</RelativeLayout>
